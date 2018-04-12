@@ -94,7 +94,12 @@
 
   </div>
 
-  <div class="container">
+  <div class="container form-container">
+    <div class="row">
+      <div class="six columns">
+        <h1 class="form-header">Add a train</h1>
+      </div>
+    </div>
     <!-- The above form looks like this -->
     <form>
       <div class="row">
@@ -109,12 +114,12 @@
       </div>
       <div class="row">
         <div class="six columns">
-          <label for="exampleTextInput">First Train Time</label>
+          <label for="exampleTextInput">First Train Time (24 hour format)</label>
           <input class="u-full-width" type="text" placeholder="08:00" id="first-time">
         </div>
         <div class="six columns">
-          <label for="exampleTextInput">Frequency</label>
-          <input class="u-full-width" type="text" placeholder="5 mins" id="train-frequency">
+          <label for="exampleTextInput">Frequency (in minutes)</label>
+          <input class="u-full-width" type="number" placeholder="5 mins" id="train-frequency">
         </div>
       </div>
       <input class="button-primary" type="submit" value="Submit" id="submit-button">
