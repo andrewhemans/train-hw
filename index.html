@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Train Tracker</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/skeleton.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+
+  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row header">
+      <div class="one-half column">
+        <h1 class="header-text">Train Tracker</h1>
+      </div>
+      <div class="one-half column">
+        <div class="row">
+          <div class="three columns circle green">
+            <p class="number">1</p>
+          </div>
+          <div class="three columns circle yellow">
+            <p class="number">8</p>
+          </div>
+          <div class="three columns circle red">
+            <p class="number">2</p>
+          </div>
+          <div class="three columns circle blue">
+            <p class="number">0</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="three columns circle purple">
+            <p class="number">9</p>
+          </div>
+          <div class="three columns circle blue">
+            <p class="number">7</p>
+          </div>
+          <div class="three columns circle green">
+            <p class="number">6</p>
+          </div>
+          <div class="three columns circle yellow">
+            <p class="number">4</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <table class="u-full-width" id="train-table">
+      <thead>
+        <tr>
+          <th>Train Name</th>
+          <th>Destination</th>
+          <th>Frequency (Min)</th>
+          <th>Next Arrival</th>
+          <th>Minutes Away</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="container">
+    <!-- The above form looks like this -->
+    <form>
+      <div class="row">
+        <div class="six columns">
+          <label for="exampleTextInput">Train Name</label>
+          <input class="u-full-width" type="text" placeholder="Green Line" id="train-name">
+        </div>
+        <div class="six columns">
+          <label for="exampleTextInput">Destination</label>
+          <input class="u-full-width" type="text" placeholder="Downtown" id="train-destination">
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <label for="exampleTextInput">First Train Time</label>
+          <input class="u-full-width" type="text" placeholder="08:00" id="first-time">
+        </div>
+        <div class="six columns">
+          <label for="exampleTextInput">Frequency</label>
+          <input class="u-full-width" type="text" placeholder="5 mins" id="train-frequency">
+        </div>
+      </div>
+      <input class="button-primary" type="submit" value="Submit" id="submit-button">
+    </form>
+
+    <!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-body"> inside of it -->
+
+    <!-- Note: The class .u-full-width is just a utility class shorthand for width: 100% -->
+  </div>
+  <!-- JavaScript -->
+  <script src="assets/js/app.js"></script>
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
