@@ -54,7 +54,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   var firstTime = childSnapshot.val().time;
   var trainFrequency = childSnapshot.val().frequency;
 
-  console.log(firstTime);
+  // console.log(firstTime);
 
   // Train Info
   // console.log(trainName);
@@ -65,33 +65,29 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   // Assumptions
   var tFrequency = trainFrequency;
 
-  // Time is 3:30 AM
-  // var firstTime = "03:30";
-  console.log(firstTime);
-
   // First Time (pushed back 1 year to make sure it comes before current time)
   var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
-  console.log(firstTimeConverted);
+  // console.log(firstTimeConverted);
 
   // Current Time
   var currentTime = moment();
-  console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+  // console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
 
   // Difference between the times
   var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
-  console.log("DIFFERENCE IN TIME: " + diffTime);
+  // console.log("DIFFERENCE IN TIME: " + diffTime);
 
   // Time apart (remainder)
   var tRemainder = diffTime % tFrequency;
-  console.log(tRemainder);
+  // console.log(tRemainder);
 
   // Minute Until Train
   var tMinutesTillTrain = tFrequency - tRemainder;
-  console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+  // console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
   // Next Train
   var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-  console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+  // console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
 
 
 
